@@ -276,7 +276,14 @@
             </div>
           </div>
           <div class="col-lg-8">
-            <form action="">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  <p style="color: red; font-weight: bold;">{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+             {% endwith %}
+            <form action="{{ url_for('contact_me') }}" method="post">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -296,7 +303,7 @@
           </div>
         </div>
         <div class="copyright">
-          <p>Copyright © Siddharth</p>
+          <p>Copyright © Siddharth Movaliya</p>
         </div>
       </div>
     </section>
