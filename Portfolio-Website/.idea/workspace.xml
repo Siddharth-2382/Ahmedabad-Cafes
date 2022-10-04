@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc0bdde7-a94b-447f-8fd5-e29ba35ddeec" name="Changes" comment="Initial Commit">
+    <list default="true" id="bc0bdde7-a94b-447f-8fd5-e29ba35ddeec" name="Changes" comment="Added functionality to contact form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -75,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664901147700</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added functionality to contact form">
+      <created>1664903919265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664903919265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Added functionality to contact form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to contact form" />
   </component>
 </project>
