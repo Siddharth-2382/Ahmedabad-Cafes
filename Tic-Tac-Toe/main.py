@@ -33,7 +33,7 @@ def is_win():
 
 
 def play_again():
-    again = input("Enter Y to play again and N to exit.\t").upper()
+    again = input("Enter 'Y' to play again and 'N' to exit.\t").upper()
     if again == "Y":
         clear_board()
         start_game()
@@ -43,7 +43,7 @@ def play_again():
 
 def start_game():
     win = False
-    users = [[1, "X"], [2, "O"]]
+    users = [[1, "X", 0], [2, "O", 0]]
 
     display_board()
 
@@ -51,7 +51,8 @@ def start_game():
         for user in users:
             ask_user_input(user)
             if is_win():
-                print(f"'{user[1]}' wins!")
+                user[2] += 1
+                print(f"'{user[1]}' wins!\nScores: 'X'-{users[0][2]}  'O'-{users[1][2]}")
                 if not play_again():
                     break
 
