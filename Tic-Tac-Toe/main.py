@@ -18,12 +18,16 @@ def display_board():
 
 def ask_user_input(user_info):
     user_input = int(input(f"Player-{user_info[0]}'s turn. Choose a number to place your tic.\t"))
-    place_tic(user_input - 1, user_info[1])
+    place_tic(user_input - 1, user_info)
 
 
-def place_tic(user_move, tic):
-    board[user_move] = tic
-    display_board()
+def place_tic(user_move, user_info):
+    if board[user_move] == " ":
+        board[user_move] = user_info[1]
+        display_board()
+    else:
+        print("Enter a valid move you idiot!")
+        ask_user_input(user_info)
 
 
 def is_win():
