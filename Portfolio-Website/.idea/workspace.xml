@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc0bdde7-a94b-447f-8fd5-e29ba35ddeec" name="Changes" comment="Added functionality to contact form">
+    <list default="true" id="bc0bdde7-a94b-447f-8fd5-e29ba35ddeec" name="Changes" comment="Changes made to experience in about me">
+      <change afterPath="$PROJECT_DIR$/static/images/watermarkapp.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" afterDir="false" />
@@ -31,6 +32,7 @@
       <recent name="$PROJECT_DIR$/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664903919265</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changes made to experience in about me">
+      <created>1664904607610</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664904607610</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +108,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added functionality to contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to contact form" />
+    <MESSAGE value="Changes made to experience in about me" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes made to experience in about me" />
   </component>
 </project>
