@@ -53,7 +53,7 @@ def verify_word(event):
 
 
 def update_wpm():
-    wpm = correct_word + incorrect_word
+    wpm = (correct_word + incorrect_word)*1.5
     wpm_label.config(text=f"WPM: {wpm:.2f}")
 
 
