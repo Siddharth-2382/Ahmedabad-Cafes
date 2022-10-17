@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5752886-8a71-43a7-9e02-dbc65d15222a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ball.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/brick.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paddle.py" afterDir="false" />
+    <list default="true" id="b5752886-8a71-43a7-9e02-dbc65d15222a" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ball.py" beforeDir="false" afterPath="$PROJECT_DIR$/ball.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brick.py" beforeDir="false" afterPath="$PROJECT_DIR$/brick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Portfolio-Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio-Website/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -67,6 +67,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665755131775</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1666000508347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666000508347</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,5 +88,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

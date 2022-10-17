@@ -1,6 +1,7 @@
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from brick import Bricks
 import time
 
 screen = Screen()
@@ -11,6 +12,7 @@ screen.tracer(0)
 screen.listen()
 
 paddle = Paddle((0, -250))
+bricks = Bricks()
 ball = Ball()
 
 screen.onkey(paddle.go_right, "Right")
@@ -26,10 +28,14 @@ while game_is_on:
     if ball.ycor() > 280:
         ball.rebounce()
 
+    if ball.xcor() > 370 or ball.xcor() < -370:
+        ball.bounce()
+
     if ball.ycor() < -220 and ball.distance(paddle) < 50:
         ball.rebound()
 
-    if ball.xcor() > 370 or ball.xcor() < -370:
-        ball.bounce()
+    if ball.ycor() < -270:
+        ball.reset_position()
+        
 
 screen.exitonclick()
