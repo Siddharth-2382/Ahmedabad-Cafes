@@ -1,3 +1,4 @@
+import random
 from turtle import Turtle
 
 
@@ -10,6 +11,15 @@ class Ball(Turtle):
         self.color("white")
         self.x_move = 10
         self.y_move = 10
+
+    def launch(self):
+        if random.choice([0, 1]):
+            new_x = self.xcor() + random.choice(range(-60, 61, 10))
+        else:
+            new_x = self.xcor() + random.choice(range(-60, 61, 10))
+            self.bounce(x_bounce=True, y_bounce=False)
+        new_y = self.ycor() + self.y_move
+        self.goto(new_x, new_y)
 
     def move(self):
         new_x = self.xcor() + self.x_move
@@ -28,3 +38,6 @@ class Ball(Turtle):
     def reset_position(self):
         self.goto(0, -229)
         self.rebound()
+
+    def restart(self):
+        self.goto(0, -229)
