@@ -17,15 +17,15 @@ class Brick(Turtle):
         self.color(list(BRICK_PROP.keys())[random.choice(range(4))])
         self.shapesize(stretch_wid=1, stretch_len=4)
         self.goto(position)
-        self.left_wall = self.xcor() - 5
-        self.right_wall = self.xcor() + 5
-        self.upper_wall = self.ycor() + 5
-        self.bottom_wall = self.ycor() - 5
+        self.left_wall = self.xcor() - 30
+        self.right_wall = self.xcor() + 30
+        self.upper_wall = self.ycor() + 15
+        self.bottom_wall = self.ycor() - 15
 
 
 class Bricks:
     def __init__(self):
-        self.y_start = 35
+        self.y_start = 70
         self.y_end = 280
         self.bricks = []
         self.create_all_lanes()
