@@ -1,4 +1,3 @@
-import turtle
 from turtle import Screen, Turtle
 from paddle import Paddle
 from ball import Ball
@@ -15,12 +14,11 @@ def close():
 def restart():
     global game_paused, lives, game_just_started
     lives = 3
-    writer.clear()
+    t1.clear()
+    t2.clear()
     paddle.reset_paddle()
     reset_bricks()
     ball.restart()
-    time.sleep(1)
-    screen.update()
     game_paused = False
     game_just_started = True
 
@@ -53,11 +51,13 @@ canvas = screen.getcanvas()
 root = canvas.winfo_toplevel()
 root.protocol("WM_DELETE_WINDOW", close)
 
-writer = Turtle()
-writer.speed(0)
-writer.color("white")
-writer.penup()
-writer.hideturtle()
+t1, t2 = Turtle(), Turtle()
+writers = [t1, t2]
+for writer in writers:
+    writer.speed(0)
+    writer.color("white")
+    writer.penup()
+    writer.hideturtle()
 
 
 def check_collision_with_walls():
@@ -101,15 +101,15 @@ def check_collision_with_brick():
 
 
 def play_again():
-    writer.goto(0, -30)
-    writer.write("Press Y to play again and Esc to exit.", align="center", font=("Courier", 24, "normal"))
+    t2.goto(0, -30)
+    t2.write("Press Y to play again and Esc to exit.", align="center", font=("Courier", 24, "normal"))
 
 
 def game_over(msg):
     global game_paused
     game_paused = True
-    writer.goto(0, 0)
-    writer.write(f"You {msg}!", align="center", font=("Courier", 24, "normal"))
+    t1.goto(0, 0)
+    t1.write(f"You {msg}!", align="center", font=("Courier", 24, "normal"))
     play_again()
 
 
