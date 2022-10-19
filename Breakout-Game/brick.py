@@ -1,12 +1,7 @@
 from turtle import Turtle
 import random
 
-BRICK_PROP = {
-    "red": 3.5,
-    "yellow": 4,
-    "green": 5.5,
-    "blue": 6
-}
+BRICK_COLOR = ["red", "yellow", "green", "blue"]
 
 
 class Brick(Turtle):
@@ -14,7 +9,7 @@ class Brick(Turtle):
         super().__init__()
         self.shape("square")
         self.penup()
-        self.color(list(BRICK_PROP.keys())[random.choice(range(4))])
+        self.color(BRICK_COLOR[random.choice(range(4))])
         self.shapesize(stretch_wid=1, stretch_len=4)
         self.goto(position)
         self.left_wall = self.xcor() - 30

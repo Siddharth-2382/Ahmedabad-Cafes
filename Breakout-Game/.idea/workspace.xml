@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5752886-8a71-43a7-9e02-dbc65d15222a" name="Changes" comment="Added restart function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="b5752886-8a71-43a7-9e02-dbc65d15222a" name="Changes" comment="Fixed text clear method">
+      <change beforePath="$PROJECT_DIR$/brick.py" beforeDir="false" afterPath="$PROJECT_DIR$/brick.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Portfolio-Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio-Website/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -101,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666114397219</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed text clear method">
+      <created>1666160080970</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666160080970</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +127,7 @@
     <MESSAGE value="Added bricks" />
     <MESSAGE value="Added functionality to bricks" />
     <MESSAGE value="Added restart function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added restart function" />
+    <MESSAGE value="Fixed text clear method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed text clear method" />
   </component>
 </project>
