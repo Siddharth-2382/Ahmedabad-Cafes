@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5752886-8a71-43a7-9e02-dbc65d15222a" name="Changes" comment="Fixed text clear method">
-      <change beforePath="$PROJECT_DIR$/brick.py" beforeDir="false" afterPath="$PROJECT_DIR$/brick.py" afterDir="false" />
+    <list default="true" id="b5752886-8a71-43a7-9e02-dbc65d15222a" name="Changes" comment="Replaced brick dict with list">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Portfolio-Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio-Website/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Text-to-Morse-Code-Converter/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -107,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666160080970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Replaced brick dict with list">
+      <created>1666160258749</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666160258749</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +136,7 @@
     <MESSAGE value="Added functionality to bricks" />
     <MESSAGE value="Added restart function" />
     <MESSAGE value="Fixed text clear method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed text clear method" />
+    <MESSAGE value="Replaced brick dict with list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced brick dict with list" />
   </component>
 </project>

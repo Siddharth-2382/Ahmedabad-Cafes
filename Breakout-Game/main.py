@@ -5,10 +5,32 @@ from brick import Bricks
 import time
 
 
-def close():
+def exit_game():
     global game_is_on
     game_is_on = False
     return game_is_on
+
+
+def pause():
+    global game_paused
+    if not game_paused:
+        game_paused = True
+        t1.goto(0, 0)
+        t1.write("Press SPACE to continue and ESC to exit.", align="center", font=("Courier", 24, "normal"))
+    else:
+        t1.clear()
+        game_paused = False
+
+
+def close():
+    global game_paused
+    game_paused = True
+    t1.clear()
+    t1.goto(0, 0)
+    t1.write("Press ESC again to exit and SPACE to continue.", align="center", font=("Courier", 24, "normal"))
+    print("i'm here")
+    screen.onkey(exit_game, "Escape")
+    screen.onkey(pause, "space")
 
 
 def restart():
@@ -47,6 +69,7 @@ screen.onkey(paddle.go_right, "Right")
 screen.onkey(paddle.go_left, "Left")
 screen.onkey(close, "Escape")
 screen.onkey(restart, "y")
+screen.onkey(pause, "space")
 canvas = screen.getcanvas()
 root = canvas.winfo_toplevel()
 root.protocol("WM_DELETE_WINDOW", close)
