@@ -28,7 +28,6 @@ def close():
     t1.clear()
     t1.goto(0, 0)
     t1.write("Press ESC again to exit and SPACE to continue.", align="center", font=("Courier", 24, "normal"))
-    print("i'm here")
     screen.onkey(exit_game, "Escape")
     screen.onkey(pause, "space")
 
