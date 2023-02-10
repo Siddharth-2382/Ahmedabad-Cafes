@@ -1,0 +1,37 @@
+{% block title%}
+<title>Ahmedabad Cafes - All cafes & restaurant</title>
+{% endblock %}
+{% include "header.html" %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all-cafes.css') }}">
+{% endblock %}
+
+<!-- Title -->
+<section id="title">
+    <div class="inner">
+        <h2>All Cafes & Restaurant</h2>
+        <p>Check out the best cafes and restaurant<br/>
+            around the city of Ahmedabad.</p>
+        <ul class="actions special">
+            <li><a href="#cafes" class="button primary scrolly">Check Now</a></li>
+        </ul>
+    </div>
+</section>
+
+<!--Cafes & Restaurants -->
+<section id="cafes" class="wrapper alt style2">
+    <div class="cafes-grid">
+        {% for place in places: %}
+        <div class="row">
+            <img class="cafes-image" src="data:image/png;base64,{{place['image']}}" alt=""/>
+            <div class="content">
+                <h2>{{ place['name'] }}</h2>
+                <p>{{ place['address'] }}.</p>
+                <button class="button fit" style="width: 200px">See More</button>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</section>
+
+{% include "footer.html" %}

@@ -1,0 +1,58 @@
+{% block title %}
+<title>Ahmedabad Cafes - Add cafe or restaurant</title>
+{% endblock %}
+{% include "header.html"%}
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/add_cafe.css') }}"/>
+{% endblock %}
+
+<!--Add cafe & restaurant form -->
+<section id="add" class="wrapper style1 special">
+    <div class="inner">
+        <header class="major">
+            <h2>|Thanks for choosing us|<br>
+                |Add new cafe or restaurant|</h2>
+            <div>
+                <form action="{{ url_for('search_cafe') }}" method="POST">
+                    <ul>
+                        <li>
+                            <label>Name of Cafe or Restaurant</label>
+                            <input name="place_query" type="text" placeholder="Name of a cafe or restaurant"
+                                   required="required"/>
+                            <span class="example">Your search may take a while. Why not remember the time you spent there.</span>
+                        </li>
+                        <button class="search-btn button fit primary" style="width: auto">Search</button>
+                    </ul>
+                </form>
+                {% if not all_places == [] %}
+                <h2>Here's all that we got!</h2>
+                {% endif %}
+                {% for place in all_places: %}
+                <form action="{{ url_for('add_cafe') }}" method="post">
+                    <div id="result" class="result">
+                        <div class="cafes-grid">
+                            <div class="row">
+                                <img class="cafes-image" src="data:image/png;base64,{{place['image']}}" alt=""/>
+                            </div>
+                            <div class="row">
+                                <div class="content">
+                                    <input type="hidden" name="name" value="{{ place['name'] }}"/>
+                                    <input type="hidden" name="address" value="{{ place['address'] }}"/>
+                                    <input type="hidden" name="image" value="{{ place['image'] }}" />
+                                    <label>{{ place['name'] }}</label>
+                                    <p>{{ place['address'] }}.</p>
+                                    <button class="button fit" style="width: 200px">
+                                        Add This
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                {% endfor %}
+            </div>
+        </header>
+    </div>
+</section>
+
+{% include "footer.html" %}

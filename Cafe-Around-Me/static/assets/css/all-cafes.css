@@ -1,0 +1,97 @@
+h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+.cafes-grid {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 70px;
+}
+
+.content {
+    height: auto
+}
+
+@media screen and (max-width: 1680px) {
+    .cafes-grid{
+        grid-template-columns:  repeat(3, 1fr);
+        }
+
+    .cafes-image {
+        height: 300px;
+        width: 438px;
+    }
+
+    }
+
+@media screen and (max-width: 1280px) {
+    .cafes-grid{
+        grid-template-columns:  repeat(3, 1fr);
+        }
+
+    .cafes-image {
+        height: 293px;
+        width: 363px;
+    }
+
+    }
+
+@media screen and (max-width: 980px) {
+    h2 {
+    font-size: 1.1rem
+    }
+
+    .cafes-grid{
+        grid-template-columns:  repeat(2, 1fr);
+        }
+
+    .cafes-image {
+        height: 228px;
+        width: 348px;
+    }
+
+    }
+
+@media screen and (max-width: 819px) {
+    h2 {
+    font-size: 1.1rem
+    }
+
+    .cafes-grid{
+        grid-template-columns:  repeat(2, 1fr);
+        }
+
+    .cafes-image {
+        height: 222px;
+        width: 322px;
+    }
+
+    }
+
+@media screen and (max-width: 736px) {
+    .cafes-grid{
+        grid-template-columns:  repeat(1, 1fr);
+        padding: 40px;
+        }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        padding: 0 0 0 2rem
+    }
+
+    .cafes-image {
+        height: 220px;
+        width: 332px;
+    }
+
+    }
+
