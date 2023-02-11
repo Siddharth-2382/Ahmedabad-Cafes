@@ -18,13 +18,26 @@ p {
 }
 
 @media screen and (max-width: 1680px) {
+    .card{
+        width: auto;
+        height: 36.5rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
     .cafes-grid{
         grid-template-columns:  repeat(3, 1fr);
         }
 
     .cafes-image {
         height: 300px;
-        width: 438px;
+        width: 412px;
+        border-radius: 25px;
+    }
+
+    .button.fit{
+        position: absolute;
+        bottom: 0px;
     }
 
     }

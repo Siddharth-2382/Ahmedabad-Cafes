@@ -23,11 +23,13 @@
     <div class="cafes-grid">
         {% for place in places: %}
         <div class="row">
-            <img class="cafes-image" src="data:image/png;base64,{{place['image']}}" alt=""/>
-            <div class="content">
-                <h2>{{ place['name'] }}</h2>
-                <p>{{ place['address'] }}.</p>
-                <button class="button fit" style="width: 200px">See More</button>
+            <div class="card">
+              <img src="data:image/png;base64,{{place['image']}}" class="card-img-top cafes-image" alt="...">
+              <div class="card-body">
+                <h2 class="card-title">{{ place['name'] }}</h2>
+                <p class="card-text">{{ place['address'] }}.</p>
+              </div>
+              <button class="button fit">See More</button>
             </div>
         </div>
         {% endfor%}
