@@ -19,14 +19,37 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     margin: -20px 0 50px;
+    overflow: hidden;
+}
+
+#menu .navbrand{
+    letter-spacing: 0.2rem;
+    color: white;
+    font-size: initial;
+    font-weight: inherit;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#menu ul li a {
+    margin: 0;
 }
 
 h1 {
     font-weight: bold;
     margin: 0;
+    font: revert;
+    letter-spacing: normal;
+    color: black;
+    text-transform: initial;
 }
 
-#it {
+h1.welcome {
+    color: white;
+    line-height: initial;
+}
+
+#cafes {
     font-size: 2.125rem;
     color: rgb(160,108,63);
 }
@@ -45,13 +68,27 @@ p {
 
 span {
     font-size: 12px;
+    color: black;
+    letter-spacing: initial;
+}
+
+span.menu {
+    color: white;
+    letter-spacing: inherit;
+    font-size: inherit;
 }
 
 a {
     color: #333;
     font-size: 14px;
     text-decoration: none;
+    border-bottom: none;
     margin: 15px 0;
+    letter-spacing: initial;
+}
+
+a.menuToggle{
+    margin: 0;
 }
 
 button {
@@ -65,6 +102,8 @@ button {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 200ms ease-in;
+    line-height: initial;
+    height: initial;
 }
 
 button:hover {
@@ -96,20 +135,23 @@ form {
     text-align: center;
 }
 
-input {
+input[type="text"]:invalid,
+input[type="password"]:invalid,
+input[type="email"]:invalid,
+select:invalid,
+textarea:invalid {
+    box-shadow: none;
+    color: black;
+    margin-bottom: 0.6rem;
     background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
 }
 
-input,select {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
+input[type="text"],
+input[type="password"],
+input[type="email"], select {
+    height: 2.5rem;
+    color: black;
+    margin-bottom: 0.6rem;
 }
 
 .container {
@@ -235,6 +277,7 @@ input,select {
 
 .social-container {
     margin: 20px 0;
+    letter-spacing: initial;
 }
 
 .social-container a {

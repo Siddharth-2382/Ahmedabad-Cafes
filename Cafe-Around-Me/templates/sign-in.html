@@ -6,13 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmedabad Cafes - Sign-Up or Sign-In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="{{ url_for('static', filename='assets/css/sign-in.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="index.js">
 </head>
 
 <body>
+    <header id="header" class="alt">
 
+        <nav id="nav">
+            <ul>
+                <li class="special">
+                    <a href="#menu" class="menuToggle"><span class="menu">Menu</span></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="{{ url_for('search_cafe') }}">Add Cafe</a></li>
+                            <li><a href="#footer">Our Socials</a></li>
+                            <li><a href="{{ url_for('all_cafes') }}">All Cafes & Restaurants</a></li>
+                            {% if not current_user.is_authenticated: %}
+                                <li><a href="{{ url_for('sign_in') }}">Sign-Up / Sign-In</a></li>
+                            {% else: %}
+                                <li><a href="{{ url_for('sign_out') }}">Sign-Out</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="{{ url_for('signup') }}" method="POST">
@@ -31,7 +53,7 @@
         </div>
         <div class="form-container sign-in-container">
             <form action="{{ url_for('loginuser') }}" method="POST">
-                <h1>Sign in</h1>
+                <h1>Sign-in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -54,18 +76,26 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
+                    <h1 class="welcome">Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Welcome to Ahmedabad<span id="it">Cafes</span></h1>
+                    <h1 class="welcome">Welcome to Ahmedabad<span id="cafes">Cafes</span></h1>
                     <p>Enter your personal details and start journey with us</p>
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Scripts -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="static/assets/js/browser.min.js"></script>
+    <script src="static/assets/js/breakpoints.min.js"></script>
+    <script src="static/assets/js/util.js"></script>
+    <script src="static/assets/js/main.js"></script>
     <script>
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
