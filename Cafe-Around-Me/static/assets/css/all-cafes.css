@@ -43,13 +43,25 @@ p {
     }
 
 @media screen and (max-width: 1280px) {
+    .card{
+        width: auto;
+        height: 35.5rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
     .cafes-grid{
-        grid-template-columns:  repeat(3, 1fr);
+        grid-template-columns:  repeat(2, 1fr);
         }
 
     .cafes-image {
-        height: 293px;
-        width: 363px;
+        min-width: -webkit-fill-available;
+    }
+
+    .button.fit{
+        position: absolute;
+        bottom: 0px;
+        min-width: -webkit-fill-available;
     }
 
     }
@@ -59,13 +71,26 @@ p {
     font-size: 1.1rem
     }
 
+    .card{
+        width: auto;
+        height: 30.5rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
     .cafes-grid{
         grid-template-columns:  repeat(2, 1fr);
         }
 
     .cafes-image {
         height: 228px;
-        width: 348px;
+        width: 100%;
+    }
+
+    .button.fit{
+        position: absolute;
+        bottom: 0px;
+        width: -webkit-fill-available;
     }
 
     }
@@ -75,18 +100,31 @@ p {
     font-size: 1.1rem
     }
 
+    .card{
+        width: auto;
+        height: 33.5rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
     .cafes-grid{
         grid-template-columns:  repeat(2, 1fr);
         }
 
     .cafes-image {
-        height: 222px;
-        width: 322px;
+        width: 100%;
     }
 
     }
 
 @media screen and (max-width: 736px) {
+    .card{
+        width: auto;
+        height: 29.5rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
     .cafes-grid{
         grid-template-columns:  repeat(1, 1fr);
         padding: 40px;
@@ -103,7 +141,13 @@ p {
 
     .cafes-image {
         height: 220px;
-        width: 332px;
+        width: 100%;
+    }
+
+    .button.fit{
+        position: absolute;
+        bottom: 0px;
+        width: 93%;
     }
 
     }
