@@ -298,27 +298,24 @@ input[type="email"], select {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
+@media screen and (max-width: 736px) {
+    h1{
+        font-size: 21px;
+    }
 
-footer p {
-    margin: 10px 0;
-}
+    a, p{
+        font-size: 11px;
+    }
 
-footer i {
-    color: red;
-}
+    form{
+        padding: 0px 24px;
+    }
 
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
+    span{
+        font-size: 10px;
+    }
+
+    #cafes{
+        font-size: 21px;
+    }
 }
