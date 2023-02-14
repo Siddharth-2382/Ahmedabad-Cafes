@@ -31,7 +31,7 @@
               </div>
                     <button class="button fit">See More</button>
                 {% if current_user.id < 3: %}
-                <button class="button fit remove">Remove</button>
+                <button class="button fit remove" onclick='window.location.href="{{ url_for('remove_cafe', cafe_id=place.id) }}"'>Remove</button>
                 {% endif %}
 
             </div>

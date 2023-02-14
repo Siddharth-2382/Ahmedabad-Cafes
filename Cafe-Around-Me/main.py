@@ -88,6 +88,7 @@ def all_cafes():
     all_places = []
     for place in places:
         info = {
+            "id": place.id,
             "name": place.p_name,
             "address": place.p_address,
             "image": base64.b64encode(place.p_image).decode("utf-8")
@@ -118,6 +119,15 @@ def add_cafe():
         db.session.add(new_place)
         db.session.commit()
         return redirect(url_for('home'))
+
+
+@app.route("/remove-cafe/<int:cafe_id>", methods=["GET", "POST"])
+@admin_only
+def remove_cafe(cafe_id):
+    cafe_to_remove = Places.query.get(cafe_id)
+    db.session.delete(cafe_to_remove)
+    db.session.commit()
+    return redirect(url_for('all_cafes'))
 
 
 @app.route("/sign-in")
