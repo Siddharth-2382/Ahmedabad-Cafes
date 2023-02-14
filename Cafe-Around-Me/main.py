@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request, redirect, flash, url_for, abort
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_utils import database_exists, create_database
 from werkzeug.security import generate_password_hash, check_password_hash
 from places import get_places
 import base64
+from functools import wraps
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "itismytopsecretkeyforthiswebsite"
@@ -45,6 +46,17 @@ with app.app_context():
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+
+def admin_only(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        # If id is not 1 then return abort with 403 error
+        if current_user.id > 2:
+            return abort(403)
+        # Otherwise continue with the route function
+        return f(*args, **kwargs)
+    return decorated_function
 
 
 @app.after_request
@@ -95,6 +107,7 @@ def search_cafe():
 
 
 @app.route("/add-cafe-or-restaurant", methods=["GET", "POST"])
+@admin_only
 def add_cafe():
     if request.method == "POST":
         new_place = Places(
