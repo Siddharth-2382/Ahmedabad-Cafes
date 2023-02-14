@@ -29,7 +29,11 @@
                 <h2 class="card-title">{{ place['name'] }}</h2>
                 <p class="card-text">{{ place['address'] }}.</p>
               </div>
-              <button class="button fit">See More</button>
+                    <button class="button fit">See More</button>
+                {% if current_user.id < 3: %}
+                <button class="button fit remove">Remove</button>
+                {% endif %}
+
             </div>
         </div>
         {% endfor%}
