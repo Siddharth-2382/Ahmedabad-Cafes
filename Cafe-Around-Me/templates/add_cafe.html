@@ -17,6 +17,13 @@
                     <ul>
                         <li>
                             <label>Name of Cafe or Restaurant</label>
+                            {% with messages = get_flashed_messages() %}
+                              {% if messages %}
+                                {% for message in messages %}
+                                  <p style="color: red">{{ message }}</p>
+                                {% endfor %}
+                              {% endif %}
+                            {% endwith %}
                             <input name="place_query" type="text" placeholder="Name of a cafe or restaurant"
                                    required="required"/>
                             <span class="example">Your search may take a while. Why not remember the time you spent there.</span>

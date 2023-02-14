@@ -108,17 +108,20 @@ def search_cafe():
 
 
 @app.route("/add-cafe-or-restaurant", methods=["GET", "POST"])
-@admin_only
 def add_cafe():
-    if request.method == "POST":
-        new_place = Places(
-            p_name=request.form['name'],
-            p_address=request.form['address'],
-            p_image=base64.b64decode(request.form['image'])
-        )
-        db.session.add(new_place)
-        db.session.commit()
-        return redirect(url_for('home'))
+    if not current_user.is_authenticated:
+        flash("Log-in required!")
+        return redirect(url_for('search_cafe'))
+    else:
+        if request.method == "POST":
+            new_place = Places(
+                p_name=request.form['name'],
+                p_address=request.form['address'],
+                p_image=base64.b64decode(request.form['image'])
+            )
+            db.session.add(new_place)
+            db.session.commit()
+            return redirect(url_for('home'))
 
 
 @app.route("/remove-cafe/<int:cafe_id>", methods=["GET", "POST"])
