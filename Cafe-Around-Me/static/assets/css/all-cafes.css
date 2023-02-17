@@ -3,6 +3,14 @@ h2 {
     font-size: 1.2em;
 }
 
+.card-title {
+    height: 50px;
+}
+
+.card-text {
+    height: 40px;
+}
+
 p {
     font-size: 0.8rem;
 }

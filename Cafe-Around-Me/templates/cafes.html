@@ -1,7 +1,7 @@
+{% include "header.html" %}
 {% block title%}
 <title>Ahmedabad Cafes - All cafes & restaurant</title>
 {% endblock %}
-{% include "header.html" %}
 {% block stylesheet %}
 <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all-cafes.css') }}">
 {% endblock %}
@@ -26,12 +26,14 @@
             <div class="card">
               <img src="data:image/png;base64,{{place['image']}}" class="card-img-top cafes-image" alt="...">
               <div class="card-body">
-                <h2 class="card-title">{{ place['name'] }}</h2>
-                <p class="card-text">{{ place['address'] }}.</p>
+                <h2 class="card-title">{{ place['name'] if place['name']|length<45 else place['name'][:40] + "..." }}</h2>
+                <p class="card-text">{{ place['address'] if place['address']|length<100 else place['address'][:100] + "..." }}.</p>
               </div>
                     <button class="button fit">See More</button>
+                {% if current_user.is_authenticated: %}
                 {% if current_user.id < 3: %}
                 <button class="button fit remove" onclick='window.location.href="{{ url_for('remove_cafe', cafe_id=place.id) }}"'>Remove</button>
+                {% endif %}
                 {% endif %}
 
             </div>
