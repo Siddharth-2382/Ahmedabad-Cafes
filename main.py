@@ -164,6 +164,11 @@ def loginuser():
             return redirect(url_for('home'))
 
 
+@app.route('/cafe_info')
+def cafe_info():
+    return render_template('cafe_info.html')
+
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == "POST":
